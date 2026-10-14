@@ -20,4 +20,22 @@ Run the unit tests with:
 python -m unittest
 ```
 
-Trailhead was built with GitHub Copilot CLI.
+## Endings
+
+There are several possible endings, shaped by your decisions and by whether your group has enough energy and water to continue safely. Reach an ending to see its label; the routes are yours to discover.
+
+## Project layout
+
+```text
+trailhead/
+  engine.py   # Terminal interaction and game loop
+  story.py    # Scenes, choices, and ending text
+  __main__.py # Entry point for python -m trailhead
+tests/
+  test_engine.py
+  test_story.py
+```
+
+## Built with GitHub Copilot
+
+Trailhead was built in a GitHub Codespace with GitHub Copilot CLI. GitHub Copilot is credited as a co-author on the commits.
