@@ -32,6 +32,7 @@ class StoryTests(unittest.TestCase):
 
     def test_endings_have_no_choices_and_labels(self):
         endings = [scene for scene in SCENES.values() if not scene.choices]
+        self.assertGreaterEqual(len(endings), 3)
         self.assertTrue(all(not ending.choices for ending in endings))
         self.assertTrue(all(ending.ending for ending in endings))
 

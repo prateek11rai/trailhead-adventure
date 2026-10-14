@@ -107,7 +107,7 @@ SCENES: dict[str, Scene] = {
     "lake_approach": Scene(
         "The last climb is steep and the air thin. You check the time: there is just enough margin to reach the basin and return.",
         (
-            Choice("Continue at a measured pace toward the lake.", "sunrise_lake", energy=-1, water=-1),
+            Choice("Continue at a measured pace toward the lake.", "lake_ending", energy=-1, water=-1),
             Choice("Push beyond the turnaround time for a better view.", "late_push", energy=-2, water=-1),
             Choice("Turn back now with daylight and a clear route.", "safe_return"),
         ),
@@ -119,7 +119,7 @@ SCENES: dict[str, Scene] = {
             Choice("Stop the climb and descend cautiously with your group.", "safe_return", energy=-1),
         ),
     ),
-    "sunrise_lake": Scene(
+    "lake_ending": Scene(
         "In the afternoon light, the lake catches a stripe of gold beneath the peaks. "
         "You take it in quietly, carry every scrap back, and start down on time.",
         ending="Sunlight at the lake",
