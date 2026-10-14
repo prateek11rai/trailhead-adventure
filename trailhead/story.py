@@ -15,6 +15,7 @@ class Choice:
 class Scene:
     text: str
     choices: tuple[Choice, ...] = ()
+    ending: str | None = None
 
 
 SCENES: dict[str, Scene] = {
@@ -119,14 +120,23 @@ SCENES: dict[str, Scene] = {
         ),
     ),
     "sunrise_lake": Scene(
-        "At sunrise, the lake catches a stripe of gold beneath the peaks. You take it in quietly, carry every scrap back, and start down on time."
+        "In the afternoon light, the lake catches a stripe of gold beneath the peaks. "
+        "You take it in quietly, carry every scrap back, and start down on time.",
+        ending="Sunlight at the lake",
     ),
     "safe_return": Scene(
-        "You return safely before the weather closes in. The lake will wait; your team has made the mountain a good day by turning back together."
+        "You return safely before the weather closes in. The lake will wait; your team has made the mountain a good day by turning back together.",
+        ending="A safe return",
     ),
     "caught_out": Scene(
-        "Darkness and sleet catch your group above the tree line. You huddle for a difficult night, a stark reminder that the turnaround time was there for a reason."
+        "Darkness and sleet catch your group above the tree line. You huddle for a difficult night, a stark reminder that the turnaround time was there for a reason.",
+        ending="Caught out",
+    ),
+    "spent": Scene(
+        "Your group is too tired or too short on water to continue safely. You turn back early together, carrying the lesson that a good trek depends on respecting your limits.",
+        ending="Too tired or too dry",
     ),
 }
 
 START_SCENE = "trailhead"
+SPENT_SCENE = "spent"
